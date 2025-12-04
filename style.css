@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 20px;
+    justify-content: center;
+}
+
+.video-container, .prediction-container, .interaction-container {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#video {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #000; /* In case video doesn't load immediately */
+}
+
+#status {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+.prediction-container ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left; /* Align list items to the left */
+}
+
+.prediction-container li {
+    padding: 5px 0;
+}
+
+.prediction-container li.strong-prediction {
+    font-weight: bold;
+    color: #2c7be5; /* Highlight the strongest prediction */
+}
+
+#virtual-object {
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50; /* Default color */
+    margin: 20px auto;
+    border-radius: 50%; /* Make it a circle */
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Smooth transitions */
+}
+
+/* Example styles for different actions */
+.action-move {
+    animation: moveRight 2s infinite alternate;
+}
+
+@keyframes moveRight {
+    from { transform: translateX(0); }
+    to { transform: translateX(100px); }
+}
+
+.action-change-color {
+    background-color: #FF5722 !important; /* Override default */
+}
+
+.action-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.interaction-container p {
+    font-weight: bold;
+}

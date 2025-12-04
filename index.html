@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时手势识别</title>
+     <!-- 加载 TensorFlow.js 核心库 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js" defer></script>
+    <!-- 加载 Teachable Machine 图像分类库 -->
+    <!-- 如果使用 Teachable Machine 导出的模型，需要加载其 tfjs teachable bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/teachable-machine-image@latest/dist/teachable-machine-image.min.js" defer></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>实时手势识别 Web 应用</h1>
+    <div class="container">
+        <!-- 视频流显示区域 -->
+        <div class="video-container">
+            <video id="video" width="300" height="225" autoplay playsinline></video>
+            <p id="status">正在初始化摄像头...</p>
+        </div>
+
+        <!-- 预测结果显示区域 -->
+        <div class="prediction-container">
+            <h2>预测结果:</h2>
+            <ul id="predictions-list"></ul>
+            <p>最高置信度手势: <span id="best-prediction">-</span></p>
+        </div>
+
+        <!-- 虚拟对象交互区域 -->
+        <div class="interaction-container">
+            <h2>虚拟对象:</h2>
+            <div id="virtual-object"></div>
+            <p id="action-description">等待手势指令...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
