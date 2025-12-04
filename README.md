@@ -1,3 +1,6 @@
+# gesture-web-app-qianwen
+gesture-web-app by qianwen
+
 1. 准备工作
 创建项目目录:
 
@@ -17,3 +20,4 @@ touch index.html style.css script.js
 
 V2.0
 创建完整的手势控制应用（不依赖tmImage）
+=======
